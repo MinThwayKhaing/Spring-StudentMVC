@@ -10,8 +10,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <spring:url value="/resources/theme/css/test.css" var="testCss" />
+        <spring:url value="/resources/css/test.css" var="testCss"/>
 <link href="${testCss}" rel="stylesheet">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -36,8 +37,7 @@
 					<p>Current Date : ${sessionScope.date}</p>
 				</div> 
     <div class="col-md-1" >
-       <input type="button" class="btn-basic" id="lgnout-button"
-						value="Log Out" onclick="location.href='/MvcProjectWithSpring/logOut'">
+     <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='logout'">
     </div>        
 </div>
 </div>
@@ -50,15 +50,14 @@
         <button class="dropdown-btn" > Class Management <i class="fa fa-caret-down"></i></button>
         
            <div class="dropdown-container">
-           <a href="courseAddPage">Course Registration </a>
-          <a href="stuAddPage">Student Registration </a>
-          <a href="stuSearchPage">Student Search </a>
+          <a href="/OJTDatabaseStudent/courseaddpage">Course Registration </a>
+          <a href="/OJTDatabaseStudent/STU001.jsp/">Student Registration </a>
+          <a href="/OJTDatabaseStudent/studentaddpage">Student Search </a>
         </div>
-        <a href="searchUserPage">Users Management</a>
+        <a href="/OJTDatabaseStudent/searchUserPage">Users Management</a>
       </div>
       <div class="main_contents">
     <div id="sub_content">
-    
     
       <form:form class="row g-3 mt-3 ms-2" action="StudentSearchPage" method="post" modelAttribute="studentbean">
         <div class="col-auto">
