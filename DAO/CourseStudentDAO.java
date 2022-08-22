@@ -81,7 +81,7 @@ public class CourseStudentDAO {
 		String sql = "select * from course_student where course_name = ?";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1,course);
+			ps.setString(1, "%" + course + "%");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				list.add( rs.getString("stu_id"));

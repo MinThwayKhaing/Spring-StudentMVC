@@ -47,6 +47,7 @@ public class StudentDAO
 		}
 		return result;
 	}
+	
 	public ArrayList<StudentResponseDTO>selectAll()
 	{
 		ArrayList<StudentResponseDTO>list=new ArrayList();
@@ -81,7 +82,7 @@ public class StudentDAO
 		try 
 		{
 			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString (7,dto.getStudentid());
+			ps.setString (6,dto.getStudentid());
 			ps.setString (1,dto.getStudentname());
 			ps.setString (2,dto.getDob());
 			ps.setString (3,dto.getGender());
