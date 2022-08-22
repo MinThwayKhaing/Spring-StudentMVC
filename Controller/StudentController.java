@@ -139,7 +139,7 @@ public class StudentController
 		 List<String> attendArray = studentbean.getCourse();
 			
 			
-//			
+	
 			if (studentbean.getStudentname().isBlank() ) {
 				model.addAttribute("errorFill", "Fill the Blank!!!");
 				model.addAttribute("studentbean", studentbean);
@@ -172,7 +172,7 @@ public class StudentController
 
 			}
 	 }
-	 @RequestMapping(value = "/deleteStu/{studentid}", method = RequestMethod.GET)
+	 @RequestMapping(value = "/DeleteStudent/{studentid}", method = RequestMethod.GET)
 		public String deleteStu(@PathVariable String studentid, ModelMap model) {
 		 StudentDAO dao=new StudentDAO();
 		 StudentRequestDTO dto = new StudentRequestDTO();
